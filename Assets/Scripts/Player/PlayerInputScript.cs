@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerInputScript : MonoBehaviour
 {
-    [SerializeField]
-    PlayerScript playerScript = null;
+    //[SerializeField]
+    //PlayerScript playerScript = null;
 
     internal float xAxis;
 
     internal bool isJumpPressed;
-    internal bool isActionPressed;
+    internal bool isCrounchPressed;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +19,6 @@ public class PlayerInputScript : MonoBehaviour
         
         isJumpPressed = Input.GetKeyDown(KeyCode.Space);
 
-        isActionPressed = Input.GetKeyDown(KeyCode.C);
+        isCrounchPressed = Input.GetKey(KeyCode.C);
     }
 }

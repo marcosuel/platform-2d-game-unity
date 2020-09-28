@@ -15,7 +15,12 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     internal PlayerCollisionScript collisionScript = null;
 
+    [SerializeField]
+    internal PlayerAnimationScript animationScript = null;
+
+
     internal Rigidbody2D rb2d = null;
+    internal Animator anim = null;
 
     [SerializeField]
     internal LayerMask groundLayer = default;
@@ -25,6 +30,7 @@ public class PlayerScript : MonoBehaviour
 
     internal bool isOnGround = true;
     internal bool isMoving = false;
+    internal bool isCrounching = false;
 
     [SerializeField]
     internal float moveSpeed = 5f;
@@ -43,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
