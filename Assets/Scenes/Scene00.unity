@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 1479073019}
   - component: {fileID: 1479073018}
   - component: {fileID: 1479073022}
+  - component: {fileID: 1479073024}
   - component: {fileID: 1479073023}
   m_Layer: 0
   m_Name: Player
@@ -871,6 +872,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1479073021}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 768
+  groundChecker: {fileID: 1681757706}
 --- !u!114 &1479073020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,10 +904,7 @@ MonoBehaviour:
   movementScript: {fileID: 1479073018}
   collisionScript: {fileID: 1479073019}
   animationScript: {fileID: 1479073022}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 768
-  groundChecker: {fileID: 1681757706}
+  states: {fileID: 1479073024}
   moveSpeed: 5
   jumpForce: 10
   maxLives: 3
@@ -938,6 +940,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1479073024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479073013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adc804e982245418d7ff5af4ce3354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1479073021}
 --- !u!1 &1487345235
 GameObject:
   m_ObjectHideFlags: 0

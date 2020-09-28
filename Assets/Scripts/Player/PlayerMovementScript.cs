@@ -28,11 +28,13 @@ public class PlayerMovementScript : MonoBehaviour
     #region Private methods
 
     private void Move(){
+        playerScript.states.isCrounching = playerScript.inputScript.isCrounchPressed;
+        playerScript.states.isMoving = playerScript.inputScript.xAxis == 0f ? false : true;
         playerScript.rb2d.velocity = new Vector2(playerScript.inputScript.xAxis * playerScript.moveSpeed, playerScript.rb2d.velocity.y);
     }
 
     private void Jump(){
-        if(playerScript.inputScript.isJumpPressed && playerScript.isOnGround){
+        if(playerScript.inputScript.isJumpPressed && playerScript.states.isOnGround){
             playerScript.rb2d.velocity = new Vector2(0f, 0f);
             playerScript.rb2d.AddForce(new Vector2(0f, playerScript.jumpForce), ForceMode2D.Impulse);
         }
