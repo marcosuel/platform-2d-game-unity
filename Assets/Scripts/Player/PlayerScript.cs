@@ -30,6 +30,8 @@ public class PlayerScript : MonoBehaviour
     
     [SerializeField]
     internal float jumpForce = 10f;
+    [SerializeField]
+    internal float crunchJumpModifier = 1.25f;
     internal int currentLives = 3;
 
     [SerializeField]

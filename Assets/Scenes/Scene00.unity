@@ -907,6 +907,7 @@ MonoBehaviour:
   states: {fileID: 1479073024}
   moveSpeed: 5
   jumpForce: 10
+  crunchJumpModifier: 1.25
   maxLives: 3
 --- !u!114 &1479073022
 MonoBehaviour:
@@ -952,7 +953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01adc804e982245418d7ff5af4ce3354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 1479073021}
 --- !u!1 &1487345235
 GameObject:
   m_ObjectHideFlags: 0
