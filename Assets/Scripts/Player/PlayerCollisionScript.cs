@@ -8,29 +8,28 @@ public class PlayerCollisionScript : MonoBehaviour
     [SerializeField]
     PlayerScript playerScript = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    internal LayerMask groundLayer = default;
+    
+    [SerializeField]
+    internal Transform groundChecker = null;
 
-    // Update is called once per frame
     void Update()
     {
-        playerScript.isOnGround = Physics2D.BoxCast(playerScript.groundChecker.position, new Vector2(0.25f, 0.5f), 0f, Vector2.zero, 4f, playerScript.groundLayer);
+        playerScript.states.isOnGround = Physics2D.BoxCast(groundChecker.position, new Vector2(0.25f, 0.5f), 0f, Vector2.zero, 4f, groundLayer);
     }
 
     #region Private methods
 
     //Draw BoxCast
     private void drawBoxCast(){
-        Vector2 origin = playerScript.groundChecker.position;
+        Vector2 origin = groundChecker.position;
         Vector2 size = new Vector2(0.25f, 0.5f);
         var angle = 0f;
         var direction = Vector2.zero;
         var distance = 4f;
-        playerScript.isOnGround = Physics2D.BoxCast(origin, size, angle, direction, distance, playerScript.groundLayer);
-        Debug.Log(playerScript.isOnGround);
+        playerScript.states.isOnGround = Physics2D.BoxCast(origin, size, angle, direction, distance, groundLayer);
+        Debug.Log(playerScript.states.isOnGround);
         Vector2 t_tl = origin + new Vector2(-size.x * 0.5f, size.y * 0.5f);
         Vector2 t_tr = origin + new Vector2(size.x * 0.5f, size.y * 0.5f);
         Vector2 t_bl = origin + new Vector2(-size.x * 0.5f, -size.y * 0.5f);
