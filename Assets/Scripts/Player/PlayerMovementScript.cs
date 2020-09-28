@@ -22,21 +22,13 @@ public class PlayerMovementScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move(playerScript.inputScript.xAxis);
+        Move();
     }
 
     #region Private methods
 
-    private void Move(float xAxis){
-        if(xAxis == 0f){
-            playerScript.isMoving = false;
-            //anim.SetBool("isMoving", false);
-        }else{
-            playerScript.isMoving = true;
-            //anim.SetBool("isMoving", true);
-            transform.eulerAngles = new Vector3(0f, xAxis > 0 ? 0 : 180, 0);
-        }
-        playerScript.rb2d.velocity = new Vector2(xAxis * playerScript.moveSpeed, playerScript.rb2d.velocity.y);
+    private void Move(){
+        playerScript.rb2d.velocity = new Vector2(playerScript.inputScript.xAxis * playerScript.moveSpeed, playerScript.rb2d.velocity.y);
     }
 
     private void Jump(){
