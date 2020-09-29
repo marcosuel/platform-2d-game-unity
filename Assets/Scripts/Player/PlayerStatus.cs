@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerStats
+public static class PlayerStatus
 {
     private static int vidas, pontos;
 
@@ -30,4 +30,5 @@ public static class PlayerStats
             pontos = value;
         }
     }
+    
 }

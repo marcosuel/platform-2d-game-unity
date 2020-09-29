@@ -5,19 +5,26 @@ using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour
 {
-    private Text ui_points;
+    private Text ui_pontos;
+    private Text ui_vidas;
 
     private void Start()
     {
-        ui_points = GameObject.Find("HUD/Points").GetComponent<Text>();
-        ui_points.text = PlayerStats.Pontos.ToString();
+        ui_pontos = GameObject.Find("HUD/Pontos/Text").GetComponent<Text>();
+        ui_pontos.text = PlayerStatus.Pontos.ToString();
+        ui_vidas = GameObject.Find("HUD/Vidas/Text").GetComponent<Text>();
+        ui_vidas.text = "x"+PlayerStatus.Vidas.ToString();
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.V)){
-            PlayerStats.Pontos += 10;
-            ui_points.text = PlayerStats.Pontos.ToString();
+            PlayerStatus.Pontos += 10;
+            ui_pontos.text = PlayerStatus.Pontos.ToString();
+        }
+        if(Input.GetKeyDown(KeyCode.B)){
+            PlayerStatus.Vidas--;
+            ui_vidas.text = PlayerStatus.Vidas.ToString();
         }
     }
 

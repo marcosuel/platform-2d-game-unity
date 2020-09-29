@@ -14,4 +14,8 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadPrevScene(){
         SceneManager.LoadScene(prevScene);
     }
+
+    public void RestartScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
