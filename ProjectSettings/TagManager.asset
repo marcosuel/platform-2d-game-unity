@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Reset
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - Back
-  - Middle
+  - Reset
+  - 
   - 
   - Ground
   - Wall
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3440662125
+    locked: 0
+  - name: Ground
+    uniqueID: 1091184303
+    locked: 0
+  - name: Entity
+    uniqueID: 1822031377
     locked: 0
