@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneManagerScript : MonoBehaviour
 {
+    private string mainMenuScene = "MainMenu";
     public string nextScene;
     public string prevScene;
 
@@ -15,7 +16,11 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadScene(prevScene);
     }
 
-    public void RestartScene(){
+    public void RestartCurrentScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void RestartGameScene(){
+        SceneManager.LoadScene(mainMenuScene);
     }
 }
