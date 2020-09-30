@@ -13,7 +13,7 @@ public class UIManagerScript : MonoBehaviour
         ui_pontos = GameObject.Find("HUD/Pontos/Text").GetComponent<Text>();
         ui_pontos.text = PlayerStatus.Pontos.ToString();
         ui_vidas = GameObject.Find("HUD/Vidas/Text").GetComponent<Text>();
-        ui_vidas.text = "x"+PlayerStatus.Vidas.ToString();
+        ui_vidas.text = "x "+PlayerStatus.Vidas.ToString();
     }
 
     private void Update()
@@ -24,13 +24,13 @@ public class UIManagerScript : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.B)){
             PlayerStatus.Vidas--;
-            ui_vidas.text = PlayerStatus.Vidas.ToString();
+            ui_vidas.text = "x " + PlayerStatus.Vidas.ToString();
         }
     }
 
     public void UpdateUI(){
         ui_pontos.text = PlayerStatus.Pontos.ToString();
-        ui_vidas.text = PlayerStatus.Vidas.ToString();
+        ui_vidas.text = "x " + PlayerStatus.Vidas.ToString();
     }
 
 
