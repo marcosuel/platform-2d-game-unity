@@ -8,28 +8,29 @@ public class UIManagerScript : MonoBehaviour
     private Text ui_pontos;
     private Text ui_vidas;
 
+    private PlayerScript playerScript;
+
     private void Start()
     {
         ui_pontos = GameObject.Find("HUD/Pontos/Text").GetComponent<Text>();
         ui_vidas = GameObject.Find("HUD/Vidas/Text").GetComponent<Text>();
+        playerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
         UpdateUI();
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.V)){
-            PlayerStatus.Pontos += 10;
-            ui_pontos.text = PlayerStatus.Pontos.ToString();
+            playerScript.addPoints(10);
         }
         if(Input.GetKeyDown(KeyCode.B)){
-            PlayerStatus.Vidas--;
-            ui_vidas.text = "x " + PlayerStatus.Vidas.ToString();
+            playerScript.takeDamage();
         }
     }
 
     public void UpdateUI(){
         ui_pontos.text = PlayerStatus.Pontos.ToString();
-        ui_vidas.text = "x " + PlayerStatus.Vidas.ToString();
+        ui_vidas.text = "x " + (PlayerStatus.Vidas >= 0 ? PlayerStatus.Vidas.ToString() : 0.ToString());
     }
 
 

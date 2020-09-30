@@ -63,6 +63,7 @@ public class PlayerScript : MonoBehaviour
     public void takeDamage(){
         PlayerStatus.Vidas--;
         UIManager.UpdateUI();
+        GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>().RestartScene();
     }
 
     #endregion
