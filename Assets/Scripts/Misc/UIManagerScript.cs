@@ -28,5 +28,10 @@ public class UIManagerScript : MonoBehaviour
         }
     }
 
+    public void UpdateUI(){
+        ui_pontos.text = PlayerStatus.Pontos.ToString();
+        ui_vidas.text = PlayerStatus.Vidas.ToString();
+    }
+
 
 }
