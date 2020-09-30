@@ -11,9 +11,8 @@ public class UIManagerScript : MonoBehaviour
     private void Start()
     {
         ui_pontos = GameObject.Find("HUD/Pontos/Text").GetComponent<Text>();
-        ui_pontos.text = PlayerStatus.Pontos.ToString();
         ui_vidas = GameObject.Find("HUD/Vidas/Text").GetComponent<Text>();
-        ui_vidas.text = "x "+PlayerStatus.Vidas.ToString();
+        UpdateUI();
     }
 
     private void Update()
