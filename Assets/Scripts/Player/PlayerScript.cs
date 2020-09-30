@@ -24,6 +24,8 @@ public class PlayerScript : MonoBehaviour
     internal Rigidbody2D rb2d = null;
     internal Animator anim = null;
 
+    private UIManagerScript UIManager;
+
 
     [SerializeField]
     internal float moveSpeed = 5f;
@@ -32,10 +34,6 @@ public class PlayerScript : MonoBehaviour
     internal float jumpForce = 10f;
     [SerializeField]
     internal float crunchJumpModifier = 1.25f;
-    internal int currentLives = 3;
-
-    [SerializeField]
-    internal int maxLives = 3;
 
     #endregion
 
@@ -45,6 +43,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        UIManager = GameObject.Find("Managers/UIManager").GetComponent<UIManagerScript>();
     }
 
     #endregion
@@ -56,12 +55,14 @@ public class PlayerScript : MonoBehaviour
 
     #region Public methods
 
-    public int getCurrentLives(){
-        return 1;
+    public void addPoints(int points){
+        PlayerStatus.Pontos += points;
+        UIManager.UpdateUI();
     }
 
-    public int getMaxLives(){
-        return 1;
+    public void takeDamage(){
+        PlayerStatus.Vidas--;
+        UIManager.UpdateUI();
     }
 
     #endregion

@@ -9,7 +9,7 @@ public class BackgroundElements : MonoBehaviour
     private float speed = 2f;
 
     [SerializeField]
-    private Transform neighbour;
+    private Transform neighbour = null;
 
     public void Move(){
         transform.Translate(Vector2.left * speed * Time.smoothDeltaTime);
