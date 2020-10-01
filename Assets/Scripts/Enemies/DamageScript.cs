@@ -11,4 +11,6 @@ public class DamageScript : MonoBehaviour
             other.gameObject.GetComponent<PlayerScript>().takeDamage();
         }
     }
+
+    
 }
