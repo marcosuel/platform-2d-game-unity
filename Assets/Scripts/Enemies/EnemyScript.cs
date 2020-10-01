@@ -7,6 +7,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     private int health = 1;
     
+    [SerializeField]
+    private GameObject collected = null;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,6 +18,7 @@ public class EnemyScript : MonoBehaviour
         health--;
         if(health <= 0){
             Destroy(this.transform.parent.gameObject);
+            Instantiate(collected, transform.position, transform.rotation);
         }
     }
 }
