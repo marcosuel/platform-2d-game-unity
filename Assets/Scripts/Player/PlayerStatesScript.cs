@@ -10,5 +10,6 @@ public class PlayerStatesScript : MonoBehaviour
     internal bool isCrounching = false;
     internal bool isMoving = false;
     internal bool isOnGround = true;
+    internal bool isHiding = false;
 
 }

@@ -46,6 +46,7 @@ public class PlayerScript : MonoBehaviour
         UIManager = GameObject.Find("Managers/UIManager").GetComponent<UIManagerScript>();
     }
 
+
     #endregion
 
     #region Private methods
