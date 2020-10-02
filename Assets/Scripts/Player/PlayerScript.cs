@@ -35,6 +35,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     internal float crunchJumpModifier = 1.25f;
 
+    internal int startPoints = 0;
     #endregion
 
     #region Monobehavior methods
@@ -44,6 +45,7 @@ public class PlayerScript : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         UIManager = GameObject.Find("Managers/UIManager").GetComponent<UIManagerScript>();
+        startPoints = PlayerStatus.Pontos;
     }
 
 
@@ -64,6 +66,7 @@ public class PlayerScript : MonoBehaviour
     public void takeDamage(){
         PlayerStatus.Vidas--;
         UIManager.UpdateUI();
+        PlayerStatus.Pontos = this.startPoints;
         GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>().RestartScene();
     }
 
