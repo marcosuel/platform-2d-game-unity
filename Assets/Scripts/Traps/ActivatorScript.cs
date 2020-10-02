@@ -15,8 +15,18 @@ public class ActivatorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        foreach(GameObject t in throwers){
-            t.GetComponent<ThrowerScript>().Throw();
+        if(other.gameObject.tag == "Player"){
+            gameObject.GetComponent<Animator>().SetBool("Pressed", true);
+            foreach(GameObject t in throwers){
+                t.GetComponent<ThrowerScript>().Throw();
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Player"){
+            gameObject.GetComponent<Animator>().SetBool("Pressed", false);
         }
     }
 }

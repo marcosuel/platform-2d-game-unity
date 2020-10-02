@@ -12,6 +12,7 @@ public class ArrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(this.gameObject, 4);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -22,11 +23,11 @@ public class ArrowScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(this.gameObject, 2);
+        if(other.gameObject.tag == "Player"){
+            Destroy(this.gameObject, 0);
+        } else {
+            Destroy(this.gameObject, 2);
+        }
     }
 
-    public void setDir(Vector2 direction){
-        this.dir = Vector2.up;
-        Debug.Log("tudo ok");
-    }
 }

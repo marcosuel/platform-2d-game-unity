@@ -16,6 +16,6 @@ public class ThrowerScript : MonoBehaviour
 
     public void Throw(){
         GameObject arrowObj = Instantiate(arrow, spawnPoint.position, transform.rotation);
-        arrow.GetComponent<ArrowScript>().dir = this.dir;
+        arrowObj.GetComponent<ArrowScript>().dir = this.dir;
     }
 }

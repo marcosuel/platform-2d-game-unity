@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1572886702574043478}
   - component: {fileID: 1572886702574043476}
   - component: {fileID: 1572886702574043477}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Arrow
   m_TagString: Damage
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018374383, y: 0.005508207}
+  m_Offset: {x: 0.01, y: 0.005508207}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -173,7 +173,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10464731, y: 0.0033251941}
+  m_Offset: {x: -0.11, y: 0.0033251941}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
