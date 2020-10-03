@@ -7,6 +7,7 @@ TagManager:
   - Reset
   - Damage
   - Enemy
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Interative
   - Enemy
   - Hidden
-  - 
+  - Platform
   - 
   - 
   - 

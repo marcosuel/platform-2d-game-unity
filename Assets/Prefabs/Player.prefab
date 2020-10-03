@@ -176,7 +176,7 @@ MonoBehaviour:
   playerScript: {fileID: 8716238449903905039}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 71680
   groundChecker: {fileID: 8716238450640741368}
 --- !u!114 &8716238449903905032
 MonoBehaviour:
