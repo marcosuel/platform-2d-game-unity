@@ -28,10 +28,12 @@ public class MovementScript : MonoBehaviour
 
     void moveToPoint(){
         
-        if(parent.position.x >= waypoints[indexCurrentWaypoint].position.x){
-            parent.eulerAngles = Vector3.zero;
-        } else {
-            parent.eulerAngles = new Vector3(0f, 180f, 0f);
+        if(this.gameObject.tag == "Enemy"){
+            if(parent.position.x >= waypoints[indexCurrentWaypoint].position.x){
+                parent.eulerAngles = Vector3.zero;
+            } else {
+                parent.eulerAngles = new Vector3(0f, 180f, 0f);
+            }
         }
 
         parent.position = Vector2.MoveTowards(parent.position, waypoints[indexCurrentWaypoint].position

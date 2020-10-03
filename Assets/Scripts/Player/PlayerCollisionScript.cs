@@ -19,6 +19,7 @@ public class PlayerCollisionScript : MonoBehaviour
         playerScript.states.isOnGround = Physics2D.BoxCast(groundChecker.position, new Vector2(0.25f, 0.5f), 0f, Vector2.zero, 4f, groundLayer);
     }
 
+
     #region Private methods
 
     //Draw BoxCast
