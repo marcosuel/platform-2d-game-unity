@@ -1235,6 +1235,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8171379533268108288}
     m_Modifications:
+    - target: {fileID: 1639593402648887000, guid: ea173914659dc8647b1eea5e07174f07, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639593402648887000, guid: ea173914659dc8647b1eea5e07174f07, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1639593402648887011, guid: ea173914659dc8647b1eea5e07174f07, type: 3}
       propertyPath: m_Name
       value: FallingPlatform
