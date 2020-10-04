@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1de1b7c0da4864dbde4a85a1271362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: Scene00
+  firstScene: Scene01
   vidas: 3
   pontos: 0
 --- !u!4 &1217255647
