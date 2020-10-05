@@ -7,8 +7,8 @@ public class HunterScopeScript : MonoBehaviour
     [SerializeField]
     private float speed = 3f;
     
-
-    private float shootTime = 1;
+    [SerializeField]
+    private float shootTime = 1f;
     private float countTime = 0;
 
     private bool shoot = false;

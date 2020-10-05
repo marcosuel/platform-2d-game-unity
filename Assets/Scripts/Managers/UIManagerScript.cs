@@ -20,12 +20,13 @@ public class UIManagerScript : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.V)){
             playerScript.addPoints(10);
         }
         if(Input.GetKeyDown(KeyCode.B)){
             playerScript.takeDamage();
-        }
+        }*/
     }
 
     public void UpdateUI(){
