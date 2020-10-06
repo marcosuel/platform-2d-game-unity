@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -8,14 +7,14 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private GameObject phaseGoal = null;
 
-    private SceneManagerScript sceneManager;
+    private LevelChangerScript levelChanger;
 
     [SerializeField]
     private int requiredPoints = 100;
 
     private void Start()
     {
-        sceneManager = GameObject.Find("Managers/SceneManager").GetComponent<SceneManagerScript>();
+        levelChanger = GameObject.Find("Managers/LevelChanger").GetComponent<LevelChangerScript>();
     }
 
     // Update is called once per frame
@@ -24,12 +23,15 @@ public class GameManagerScript : MonoBehaviour
         if(PlayerStatus.Pontos >= requiredPoints){
             phaseGoal.SetActive(true);
         }
-        if(PlayerStatus.Vidas < 0){
-            sceneManager.RestartGameScene();
-        }
     }
 
     public void RestartScene(){
-        sceneManager.RestartCurrentScene();
+        if(PlayerStatus.Vidas >= 0){
+            Destroy(GameObject.Find("Player"));
+            levelChanger.FadeToLevel(SceneManager.GetActiveScene().name);
+        }else{
+            levelChanger.FadeToLevel("MainMenu");
+        }
+        
     }
 }

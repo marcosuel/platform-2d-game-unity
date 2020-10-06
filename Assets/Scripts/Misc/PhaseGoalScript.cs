@@ -5,17 +5,17 @@ using UnityEngine;
 public class PhaseGoalScript : MonoBehaviour
 {
 
-    private SceneManagerScript sceneManager;
+    private LevelChangerScript levelChanger;
     // Start is called before the first frame update
     void Start()
     {
-        sceneManager = GameObject.Find("Managers/SceneManager").GetComponent<SceneManagerScript>();
+        levelChanger = GameObject.Find("Managers/LevelChanger").GetComponent<LevelChangerScript>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player"){
-            sceneManager.LoadNextScene();
+            levelChanger.FadeToLevel(levelChanger.nextLevelName);
         }
     }
 }

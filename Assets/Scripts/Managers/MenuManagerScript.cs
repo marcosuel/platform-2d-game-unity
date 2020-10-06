@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuManagerScript : MonoBehaviour
 {
-
-    public string firstScene;
     public int vidas, pontos;
     
+    private LevelChangerScript levelChanger;
+
+    private void Start()
+    {
+        levelChanger = GameObject.Find("Managers/LevelChanger").GetComponent<LevelChangerScript>();
+    }
 
     public void startGame(){
         PlayerStatus.Vidas = vidas;
         PlayerStatus.Pontos = pontos;
 
-        SceneManager.LoadScene(firstScene);
+        levelChanger.FadeToLevel(levelChanger.nextLevelName);
     }
 
     public void exitGame(){
