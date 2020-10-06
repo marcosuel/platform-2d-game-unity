@@ -146,6 +146,7 @@ MonoBehaviour:
   collisionScript: {fileID: 8716238449903905033}
   animationScript: {fileID: 8716238449903905036}
   states: {fileID: 8716238449903905010}
+  playerHurtPrefab: {fileID: 6436483705857110932, guid: edb920195a6b60a45b2dd2f5c8b39f2b, type: 3}
   moveSpeed: 5
   jumpForce: 10
   crunchJumpModifier: 1.25

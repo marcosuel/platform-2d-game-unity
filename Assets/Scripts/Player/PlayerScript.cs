@@ -21,6 +21,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     internal PlayerStatesScript states = null;
 
+    [SerializeField]
+    private GameObject playerHurtPrefab = null;
+
     internal Rigidbody2D rb2d = null;
     internal Animator anim = null;
 
@@ -64,10 +67,9 @@ public class PlayerScript : MonoBehaviour
     }
 
     public void takeDamage(){
-        PlayerStatus.Vidas--;
-        UIManager.UpdateUI();
         PlayerStatus.Pontos = this.startPoints;
-        GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>().RestartScene();
+        Destroy(this.gameObject);
+        Instantiate(playerHurtPrefab, transform.position, transform.rotation);
     }
 
     #endregion
