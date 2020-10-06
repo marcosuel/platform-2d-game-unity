@@ -10,9 +10,18 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     private GameObject collected = null;
 
+    private SpriteRenderer render;
+    private Color originalColor;
+    private void Start()
+    {
+        render = transform.parent.GetComponent<SpriteRenderer>();
+        originalColor = render.color;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player"){
+            Flash();
             PlayerScript script = other.gameObject.GetComponent<PlayerScript>();
             if(script.states.isHiding){
                 return;
@@ -28,5 +37,14 @@ public class EnemyScript : MonoBehaviour
                 Instantiate(collected, transform.position, transform.rotation);
             }
         }
+    }
+
+    void Flash(){
+        render.color = Color.red;
+        Invoke("ResetColor", 0.2f);
+    }
+
+    void ResetColor(){
+        render.color = originalColor;
     }
 }
