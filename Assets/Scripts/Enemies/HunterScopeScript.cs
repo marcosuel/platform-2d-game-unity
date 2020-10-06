@@ -72,7 +72,7 @@ public class HunterScopeScript : MonoBehaviour
     }
 
     public void selfDestruction(){
-        GameObject.Find("ScopeSpawnner").GetComponent<SpawnnerScript>().Spawn();
+        //GameObject.Find("ScopeSpawnner").GetComponent<SpawnnerScript>().Spawn();
         Destroy(this.gameObject);
     }
 
