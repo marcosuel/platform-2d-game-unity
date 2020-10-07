@@ -1,0 +1,14 @@
+mm-1=start
+mm-2=tutorial
+mm-3=options
+mm-4=quit
+om-1.1=language
+om-1.2=back
+tt-1.1=Move using
+tt-1.2=or
+tt-2=press space to jump
+tt-3=Hold         or left shift to crounch and press space to jump higher
+tt-4.1=Hold         or left shift  in a bush to hide from enemies
+tt-4.2=or
+tt-4.3=Kill jumping on him
+tt-5=Collect all the fruits to go to the next level
