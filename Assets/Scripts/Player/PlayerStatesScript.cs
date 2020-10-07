@@ -12,4 +12,5 @@ public class PlayerStatesScript : MonoBehaviour
     internal bool isOnGround = true;
     internal bool isHiding = false;
 
+    
 }
