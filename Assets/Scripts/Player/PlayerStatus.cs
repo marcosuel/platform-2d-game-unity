@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class PlayerStatus
+﻿public static class PlayerStatus
 {
     private static int vidas, pontos;
 
@@ -19,7 +15,7 @@ public static class PlayerStatus
         }
     }
 
-        public static int Pontos 
+    public static int Pontos 
     {
         get 
         {
