@@ -16,7 +16,7 @@ public class FileManager : MonoBehaviour
         mapped = new Dictionary<string, string>();
         lang = FileScript.Language;
         fileName = "translation.txt";
-        myFilePath = Application.dataPath + "/Resourses/Lang" + lang +"/" + fileName;
+        myFilePath = Application.streamingAssetsPath  + "/Resourses/Lang" + lang +"/" + fileName;
         MapFromFile();
     }
 
