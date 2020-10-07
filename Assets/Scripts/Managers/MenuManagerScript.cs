@@ -21,6 +21,12 @@ public class MenuManagerScript : MonoBehaviour
         levelChanger.FadeToLevel(levelChanger.nextLevelName);
     }
 
+    public void startTutorial(){
+        PlayerStatus.Vidas = 99;
+        PlayerStatus.Pontos = pontos;
+        //tutorial scene name
+        levelChanger.FadeToLevel("Scene00");
+    }
     public void exitGame(){
         Application.Quit();
     }
