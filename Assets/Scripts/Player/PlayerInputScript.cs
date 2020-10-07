@@ -19,6 +19,6 @@ public class PlayerInputScript : MonoBehaviour
         
         isJumpPressed = Input.GetKeyDown(KeyCode.Space);
 
-        isCrounchPressed = Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftShift);
+        isCrounchPressed = Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftShift) && !isJumpPressed;
     }
 }
