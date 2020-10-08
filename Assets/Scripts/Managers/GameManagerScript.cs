@@ -34,4 +34,13 @@ public class GameManagerScript : MonoBehaviour
         }
         
     }
+
+    public int RequiredPoints{
+        get{
+            return requiredPoints;
+        }
+        set{
+            requiredPoints = value;
+        }
+    }
 }
