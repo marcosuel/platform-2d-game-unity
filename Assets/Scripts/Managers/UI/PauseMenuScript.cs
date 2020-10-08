@@ -21,6 +21,9 @@ public class PauseMenuScript : MonoBehaviour
 
     public void RestartLevel(){
         Time.timeScale = 1;
+        var player = GameObject.Find("Player");
+        player.GetComponent<PlayerScript>().resetPoints();
+        Destroy(player);
         levelChanger.FadeToLevel(SceneManager.GetActiveScene().name);
     }
 

@@ -67,9 +67,13 @@ public class PlayerScript : MonoBehaviour
     }
 
     public void takeDamage(){
-        PlayerStatus.Pontos = this.startPoints;
+        resetPoints();
         Destroy(this.gameObject);
         Instantiate(playerHurtPrefab, transform.position, transform.rotation);
+    }
+
+    public void resetPoints(){
+        PlayerStatus.Pontos = this.startPoints;
     }
 
     #endregion

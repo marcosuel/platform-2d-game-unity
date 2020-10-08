@@ -26,7 +26,7 @@ public class UIManagerScript : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && GameObject.Find("Player")){
             SetPauseMenuActive();
         }
 
