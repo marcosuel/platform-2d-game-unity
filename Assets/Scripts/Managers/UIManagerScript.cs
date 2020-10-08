@@ -12,6 +12,9 @@ public class UIManagerScript : MonoBehaviour
 
     private GameManagerScript gmScript;
 
+    [SerializeField]
+    private GameObject pauseMenuUI = null;
+
     private void Start()
     {
         gmScript = GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>();;
@@ -23,6 +26,11 @@ public class UIManagerScript : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            SetPauseMenuActive();
+        }
+
+
         /*
         if(Input.GetKeyDown(KeyCode.V)){
             playerScript.addPoints(10);
@@ -30,6 +38,13 @@ public class UIManagerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.B)){
             playerScript.takeDamage();
         }*/
+    }
+
+    public void SetPauseMenuActive(){
+        pauseMenuUI.SetActive(!pauseMenuUI.activeInHierarchy);
+        Time.timeScale = pauseMenuUI.activeInHierarchy ? 0 : 1;
+        //pause audio too
+        //AudioListener.pause = pauseMenuUI.activeInHierarchy;
     }
 
     public void UpdateUI(){
