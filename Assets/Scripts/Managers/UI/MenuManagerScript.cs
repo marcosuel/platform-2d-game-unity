@@ -9,8 +9,7 @@ public class MenuManagerScript : MonoBehaviour
     
     private LevelChangerScript levelChanger;
 
-    public GameObject mainMenuUI;
-    public GameObject optMenuUI;
+    public GameObject mainMenuUI, optMenuUI, optCredUI;
 
     private void Start()
     {
@@ -53,4 +52,15 @@ public class MenuManagerScript : MonoBehaviour
         optMenuUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }
+
+    public void OpenOptCred(){
+        optMenuUI.SetActive(false);
+        optCredUI.SetActive(true);
+    }
+
+    public void OptCredReturn(){
+        optCredUI.SetActive(false);
+        optMenuUI.SetActive(true);
+    }
+
 }
