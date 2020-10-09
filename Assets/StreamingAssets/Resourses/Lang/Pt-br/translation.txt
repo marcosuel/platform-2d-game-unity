@@ -16,3 +16,4 @@ tt-4.1=Segure      ou left shift  em um arbusto para esconder
 tt-4.2=ou
 tt-4.3=Pule no inimigo para mata-lo
 tt-5=Colete todas as frutas para avancar ao proximo nivel
+ge-1=--  Fim  --

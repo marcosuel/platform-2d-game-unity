@@ -16,3 +16,4 @@ tt-4.1=Hold         or left shift  in a bush to hide from enemies
 tt-4.2=or
 tt-4.3=Kill jumping on him
 tt-5=Collect all the fruits to go to the next level
+ge-1=--  The End  --
