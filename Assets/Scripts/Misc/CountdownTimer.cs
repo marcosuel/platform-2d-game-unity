@@ -29,10 +29,18 @@ public class CountdownTimer : MonoBehaviour
             countdownText.color = Color.red;
         }
 
+        if(currentTime <= 6 && currentTime > 0){
+            GameObject.Find("Managers/BackgroundMusic").GetComponent<BackgroundMusic>().Fade();
+        }
+
         if(currentTime <= 0 && !ended){
             countdownText.color = Color.black;
             ended = true;
+            
             SpawnScope();
+            var audioSrc = GameObject.Find("Managers/BackgroundMusic").GetComponent<BackgroundMusic>();
+            audioSrc.SetTimeOverMusic();
+            audioSrc.Play();
         }
         countdownText.text = currentTime.ToString("0");
     }

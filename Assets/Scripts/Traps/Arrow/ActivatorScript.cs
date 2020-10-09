@@ -17,6 +17,7 @@ public class ActivatorScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player"){
             gameObject.GetComponent<Animator>().SetBool("Pressed", true);
+            GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlayerSound("pressurePlate");
             foreach(GameObject t in throwers){
                 t.GetComponent<ThrowerScript>().Throw();
             }

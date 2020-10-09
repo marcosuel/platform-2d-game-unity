@@ -66,6 +66,7 @@ public class HunterScopeScript : MonoBehaviour
             if(countTime >= shootTime && !shoot){
                 shoot = true;
                 animator.SetTrigger("Shoot");
+                GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlayerSound("shoot");
                 Instantiate(bullet, transform.position, transform.rotation);
             }
         }
