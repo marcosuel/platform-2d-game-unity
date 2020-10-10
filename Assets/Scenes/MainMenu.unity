@@ -1955,8 +1955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -259.99887}
-  m_SizeDelta: {x: 0, y: 520.00226}
+  m_AnchoredPosition: {x: 0, y: -349.99887}
+  m_SizeDelta: {x: 0, y: 700.00226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216349006
 MonoBehaviour:
@@ -1996,7 +1996,8 @@ MonoBehaviour:
     #2\nhttps://freesound.org/people/BloodPixel/sounds/478252/\n\"Let's Play with
     Free Sound Effects\" https://taira-komori.jpn.org/freesounden.html\n\n8bit sample\nhttps://freesound.org/people/Suburbanwizard/sounds/442997/\n\nberceuse
     a cologne\nhttps://freesound.org/people/rap2h/sounds/527218/\n\nshoot - Leszek
-    Szary\nhttps://freesound.org/people/Leszek_Szary/sounds/146730/\n\nDirector:\nMarcos
+    Szary\nhttps://freesound.org/people/Leszek_Szary/sounds/146730/\n\nmonster attack\nhttps://freesound.org/people/RedRoxPeterPepper/sounds/420250/\n\nDie
+    or Lose Life - Adam Weeden\r\nhttps://freesound.org/people/AdamWeeden/sounds/157218/\n\nWinHarpsichord\nhttps://freesound.org/people/Fupicat/sounds/521642/\n\nDirector:\nMarcos
     Suel\n\nScreenwriter:\nMarcos Suel\n\nGame Designer:\nMarcos Suel\n\nProgramers:\nMarcos
     Suel\n\nTesters:\nMarcos Suel\n\nSpecial thanks to:\nYoutube Channel Brackeys\nYoutube
     Channel Crie Seus Jogos\nYoutube Channel  Welton King\nPaulyne Juc\xE1\r\nMarcos

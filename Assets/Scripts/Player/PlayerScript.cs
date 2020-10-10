@@ -69,6 +69,9 @@ public class PlayerScript : MonoBehaviour
     public void takeDamage(){
         resetPoints();
         Destroy(this.gameObject);
+        GameObject.Find("Managers/SoundManager").GetComponent<AudioSource>().volume = 0.05f;
+        GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("lose");
+        GameObject.Find("Managers/BackgroundMusic").GetComponent<AudioSource>().Stop();
         Instantiate(playerHurtPrefab, transform.position, transform.rotation);
     }
 
