@@ -44,7 +44,7 @@ public class UIManagerScript : MonoBehaviour
         pauseMenuUI.SetActive(!pauseMenuUI.activeInHierarchy);
         Time.timeScale = pauseMenuUI.activeInHierarchy ? 0 : 1;
         //pause audio too
-        //AudioListener.pause = pauseMenuUI.activeInHierarchy;
+        AudioListener.pause = pauseMenuUI.activeInHierarchy ? true : false;
     }
 
     public void UpdateUI(){

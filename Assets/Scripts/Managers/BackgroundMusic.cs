@@ -17,8 +17,9 @@ public class BackgroundMusic : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = first;
-        audioSource.volume = 0.04f;
+        audioSource.volume = 0.08f;
         audioSource.Play();
+        AudioListener.pause = false;
     }
 
     public void Play(){
@@ -26,7 +27,7 @@ public class BackgroundMusic : MonoBehaviour
     }
 
     public void SetTimeOverMusic(){
-        audioSource.volume = 0.05f;
+        audioSource.volume = 0.1f;
         audioSource.clip = timeOver;
     }
 
@@ -41,6 +42,6 @@ public class BackgroundMusic : MonoBehaviour
 
     public void Fade(){
         time += Time.deltaTime;
-        audioSource.volume = time >= endTime ? 0 : audioSource.volume -=0.008f * Time.deltaTime;
+        audioSource.volume = time >= endTime ? 0 : audioSource.volume -=0.016f * Time.deltaTime;
     }
 }
