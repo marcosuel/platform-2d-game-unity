@@ -5400,11 +5400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1826544848808829254, guid: fed17c0b7c795fc41a22ba9791e10275, type: 3}
       propertyPath: m_DeadZoneHeight
-      value: 0
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 1826544848808829254, guid: fed17c0b7c795fc41a22ba9791e10275, type: 3}
       propertyPath: m_SoftZoneHeight
-      value: 0.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1826544848808829254, guid: fed17c0b7c795fc41a22ba9791e10275, type: 3}
       propertyPath: m_CameraDistance
