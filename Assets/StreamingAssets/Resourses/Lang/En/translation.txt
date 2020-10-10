@@ -4,6 +4,7 @@ mm-3=options
 mm-4=quit
 om-1.1=language
 om-1.2=back
+om-1.3=credits
 pm-1=paused
 pm-2=resume
 pm-3=restart

@@ -28,7 +28,12 @@ public class ChildScript : MonoBehaviour
     }
 
     public void StartEndText(){
+        Invoke("MusicFade", 3f);
         Invoke("Activate", 0.5f);
+    }
+
+    private void MusicFade(){
+        GameObject.Find("Managers/BackgroundMusic").GetComponent<BackgroundMusic>().StartFade();
     }
 
     private void Activate(){

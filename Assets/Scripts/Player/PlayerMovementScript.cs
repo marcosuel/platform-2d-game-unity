@@ -45,6 +45,7 @@ public class PlayerMovementScript : MonoBehaviour
             var jumpModifier = playerScript.states.isCrounching ? playerScript.crunchJumpModifier : 1;
             playerScript.rb2d.velocity = new Vector2(0f, 0f);
             playerScript.rb2d.AddForce(new Vector2(0f, playerScript.jumpForce * jumpModifier), ForceMode2D.Impulse);
+            GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("jump");
         }
     }
     #endregion

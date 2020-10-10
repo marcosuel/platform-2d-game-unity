@@ -18,6 +18,7 @@ public class FoodScript : MonoBehaviour
             other.gameObject.GetComponent<PlayerScript>().addPoints(score_points);
             Destroy(this.gameObject);
             Instantiate(collected, transform.position, transform.rotation);
+            GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("collect");
         }
     }
 }

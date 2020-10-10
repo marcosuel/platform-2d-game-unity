@@ -32,6 +32,7 @@ public class EnemyScript : MonoBehaviour
             rb2d.velocity = new Vector2(0f, 0f);
             rb2d.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
             health--;
+            GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("enemyHit");
             if(health <= 0){
                 Destroy(this.transform.parent.gameObject);
                 Instantiate(collected, transform.position, transform.rotation);

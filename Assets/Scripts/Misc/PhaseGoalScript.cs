@@ -15,7 +15,14 @@ public class PhaseGoalScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player"){
-            levelChanger.FadeToLevel(levelChanger.nextLevelName);
+            GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("clear");
+            GameObject.Find("Managers/BackgroundMusic").GetComponent<AudioSource>().Stop();
+            Destroy(other.gameObject);
+            Invoke("LoadNextLevel", 2f);
         }
+    }
+
+    private void LoadNextLevel(){
+        levelChanger.FadeToLevel(levelChanger.nextLevelName);
     }
 }
