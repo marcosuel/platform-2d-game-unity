@@ -1998,10 +1998,10 @@ MonoBehaviour:
     a cologne\nhttps://freesound.org/people/rap2h/sounds/527218/\n\nshoot - Leszek
     Szary\nhttps://freesound.org/people/Leszek_Szary/sounds/146730/\n\nmonster attack\nhttps://freesound.org/people/RedRoxPeterPepper/sounds/420250/\n\nDie
     or Lose Life - Adam Weeden\r\nhttps://freesound.org/people/AdamWeeden/sounds/157218/\n\nWinHarpsichord\nhttps://freesound.org/people/Fupicat/sounds/521642/\n\nDirector:\nMarcos
-    Suel\n\nScreenwriter:\nMarcos Suel\n\nGame Designer:\nMarcos Suel\n\nProgramers:\nMarcos
+    Suel\n\nScreenwriter:\nMarcos Suel\n\nGame Designer:\nMarcos Suel\n\nProgrammers:\nMarcos
     Suel\n\nTesters:\nMarcos Suel\n\nSpecial thanks to:\nYoutube Channel Brackeys\nYoutube
-    Channel Crie Seus Jogos\nYoutube Channel  Welton King\nPaulyne Juc\xE1\r\nMarcos
-    Suel"
+    Channel Crie Seus Jogos\nYoutube Channel  Welton King\nPaulyne Juc\xE1\nVinicius
+    Salustiano\r\nMarcos Suel"
 --- !u!222 &1216349007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2563,7 +2563,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f0846ac98daacb1478fb4ce1fcdb32da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4677,7 +4677,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f0846ac98daacb1478fb4ce1fcdb32da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
