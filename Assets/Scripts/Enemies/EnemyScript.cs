@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
 
     private SpriteRenderer render;
     private Color originalColor;
+    public Color flashColor;
     private void Start()
     {
         render = transform.parent.GetComponent<SpriteRenderer>();
@@ -41,7 +42,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     void Flash(){
-        render.color = Color.red;
+        render.color = flashColor;
         Invoke("ResetColor", 0.2f);
     }
 

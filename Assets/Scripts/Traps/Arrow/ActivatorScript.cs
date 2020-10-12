@@ -7,15 +7,25 @@ public class ActivatorScript : MonoBehaviour
     [SerializeField]
     private GameObject[] throwers = null;
 
+    private bool isOnCooldown = false;
+    private float cooldownTime = 2f;
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(isOnCooldown){
+            cooldownTime -= Time.fixedDeltaTime;
+            if(cooldownTime <= 0){
+                isOnCooldown = false;
+                cooldownTime = 2f;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player"){
+        if(other.gameObject.tag == "Player" && !isOnCooldown){
+            isOnCooldown = true;
             gameObject.GetComponent<Animator>().SetBool("Pressed", true);
             GameObject.Find("Managers/SoundManager").GetComponent<SoundManagerScript>().PlaySound("pressurePlate");
             foreach(GameObject t in throwers){
@@ -27,7 +37,11 @@ public class ActivatorScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player"){
-            gameObject.GetComponent<Animator>().SetBool("Pressed", false);
+            Invoke("ResetAnimation", 2f);
         }
+    }
+
+    private void ResetAnimation(){
+        gameObject.GetComponent<Animator>().SetBool("Pressed", false);
     }
 }

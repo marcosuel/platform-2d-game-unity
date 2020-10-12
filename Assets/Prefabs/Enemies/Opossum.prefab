@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   collected: {fileID: 4284845066592408921, guid: 868a6c34b3b17f3418620cc09bfc0ad2, type: 3}
+  flashColor: {r: 0.5264415, g: 0.08317016, b: 0.8396226, a: 1}
 --- !u!61 &5356113055192602282
 BoxCollider2D:
   m_ObjectHideFlags: 0
