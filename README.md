@@ -43,3 +43,7 @@ Licença: <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative 
 <b>Background Set - NYKNCK</b>: https://kvsr.itch.io/background-set-pixel-assets<br>
 Licença: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons</a><br>
 <br>
+
+## Contato
+<b>Email</b>: marcosuelns@gmail.com<br>
+<b>Linkedin</b>: https://www.linkedin.com/in/marcos-suel-a789a31b1/<br>
